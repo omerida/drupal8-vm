@@ -8,8 +8,6 @@ To build the box:
 vagrant up
 ~~~~
 
-It will automatically fetch Drupal into a directory named `web`
-
 ## Drupal source ##
 
 The first time the provisioner runs, it will download Drupal 8 source code into a `web` directory and copy a default configuration for the database to work.
