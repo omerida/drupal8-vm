@@ -64,7 +64,7 @@ then
     cd /vagrant/web/
     wget --quiet $DRUPAL_SRC
     tar --strip-components=1 -xzf `basename $DRUPAL_SRC`
-    rm drupal-8.0.0-beta3.tar.gz
+    rm `basename $DRUPAL_SRC`
     rm /vagrant/web/sites/default/default.settings.php
 fi
 
