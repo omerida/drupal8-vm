@@ -45,11 +45,11 @@ then
 fi
 
 # install mysql
-if [ ! -e "/etc/mysql/my.cnf" ]
+if [ ! -e "/usr/bin/mysql" ]
 then
     echo "mysql-server-5.5 mysql-server/root_password_again password super-mysql" | debconf-set-selections
     echo "mysql-server-5.5 mysql-server/root_password password super-mysql" | debconf-set-selections
-    apt-get install -y mysql-server mysql client
+    apt-get install -y mysql-server mysql-client
 
     echo "Installing MySQL"
     echo "Create database drupal8" | mysql -u root -psuper-mysql
