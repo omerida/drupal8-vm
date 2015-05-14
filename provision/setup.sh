@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DRUPAL_SRC="http://ftp.drupal.org/files/projects/drupal-8.0.0-beta3.tar.gz";
+DRUPAL_SRC="http://ftp.drupal.org/files/projects/drupal-8.0.0-beta10.tar.gz";
 
 # update base system
 APT_LOCK="/vagrant/provision/apt.lock";
@@ -69,10 +69,10 @@ then
 fi
 
 # setup vhost
-if [ ! -e "/etc/apache2/sites-available/drupal8" ]
+if [ ! -e "/etc/apache2/sites-available/drupal8.conf" ]
 then
     echo "copying virtual host"
-    cp /vagrant/provision/vhost.conf /etc/apache2/sites-available/drupal8
+    cp /vagrant/provision/vhost.conf /etc/apache2/sites-available/drupal8.conf
     sudo a2ensite drupal8
     /etc/init.d/apache2 reload
 fi
